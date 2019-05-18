@@ -1,0 +1,25 @@
+{
+  "name": "friendFinder",
+  "version": "1.0.0",
+  "description": "Full-stack friend matching app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarcusSilvus/friendFinder.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarcusSilvus/friendFinder/issues"
+  },
+  "homepage": "https://github.com/MarcusSilvus/friendFinder#readme",
+  "dependencies": {
+    "express": "^4.17.0",
+    "path": "^0.12.7"
+  }
+}
