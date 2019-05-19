@@ -143,4 +143,22 @@
 
 </body>
 
+<script type="text/javascript">
+  $("#submit").on("click", function(event) {
+    event.preventDefault();
+    var newFriend = {
+      name: $("#name").val().trim(),
+      photo: $("#photo").val().trim(),
+      scores: $("#score").val().trim(),
+    };
+
+    
+    $.post("/api/friends", newFriend)
+      .then(function(data) {
+        console.log("add.html", data);
+        alert("Adding character...");
+      });
+  });
+</script>
+
 </html>
