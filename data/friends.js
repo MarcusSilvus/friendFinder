@@ -1,3 +1,6 @@
+
+
+
 var friend ={
   name: "",
   photo: "",
