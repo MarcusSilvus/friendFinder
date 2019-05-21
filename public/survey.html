@@ -143,6 +143,13 @@
 
 </body>
 
+<footer>
+    <div class="container">
+      <a href="/api/friends">API Friend List</a> <span>|</span>
+      <a href="https://github.com/MarcusSilvus/friendFinder" target="_blank">Github Repo</a>
+    </div>
+  </footer>
+
 <script type="text/javascript">
 
 
@@ -189,7 +196,6 @@
     $.post("/api/friends", newFriend)
       .then(function (data) {
         console.log("survey.html", data);
-        alert("Adding character...");
       });
 
   } else {

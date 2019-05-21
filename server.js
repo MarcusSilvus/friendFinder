@@ -29,6 +29,11 @@ var friend = [
     photo: "",
     scores: [1, 1, 5, 1, 1, 2, 5, 1, 5, 1]
   },
+  {
+    name: "MC Pee Pants",
+    photo: "https://i.ytimg.com/vi/diybDrSohHI/hqdefault.jpg",
+    scores: [3, 3, 5, 1, 5, 2, 5, 1, 5, 1]
+  }
 ];
 
 // Basic route that sends the user first to the AJAX Page
