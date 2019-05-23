@@ -1,5 +1,5 @@
 var express = require("express");
-var path = require("path");
+
 
 var app = express();
 var PORT = process.env.PORT || 8080;
@@ -7,7 +7,8 @@ var PORT = process.env.PORT || 8080;
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
+require("./routing/apiRoutes.js")(app)
+require("./routing/htmlRoutes.js")(app)
 // Links to Routes
 // to htmlRoutes.js
 
@@ -37,34 +38,35 @@ var friend = [
 ];
 
 // Basic route that sends the user first to the AJAX Page
-app.get("/", function(req, res) {
-  res.sendFile(path.join(__dirname, "public/home.html"));
-});
+// app.get("/", function(req, res) {
+//   res.sendFile(path.join(__dirname, "public/home.html"));
+// });
 
-app.get("/home", function(req, res) {
-  res.sendFile(path.join(__dirname, "public/home.html"));
-});
+// //var home = require('/public/home.html');
 
-app.get("/survey", function(req, res) {
-  res.sendFile(path.join(__dirname, "public/survey.html"));
-});
+// app.get("/home", function(req, res) {
+//   res.sendFile(path.join(__dirname, "public/home.html"));
+// });
 
+// app.get("/survey", function(req, res) {
+//   res.sendFile(path.join(__dirname, "public/survey.html"));
+// });
 
-app.get("/api/friends", function(req, res) {
-  return res.json(friend);
-});
+// app.get("/api/friends", function(req, res) {
+//   return res.json(friend);
+// });
 
-// Create New Friend - takes in JSON input
-app.post("/api/friends", function(req, res) {
+// // Create New Friend - takes in JSON input
+// app.post("/api/friends", function(req, res) {
   
-  var newFriend = req.body;
+//   var newFriend = req.body;
 
-  console.log(newFriend);
+//   console.log(newFriend);
 
-  friend.push(newFriend);
+//   friend.push(newFriend);
 
-  res.json(newFriend);
-});
+//   res.json(newFriend);
+// });
 
 // Starts the server to begin listening
 app.listen(PORT, function() {
