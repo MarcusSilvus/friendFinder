@@ -8,7 +8,12 @@ module.exports = function(app) {
   
   // Create New Friend - takes in JSON input
   app.post("/api/friends", function(req, res) {
-    
+    var totalDifference = 0;
+    var bestMatch = {
+      name: "",
+      photo: "",
+      friendDiff: 1000
+    };
     var newFriend = req.body;
   
     console.log(newFriend);
