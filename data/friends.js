@@ -19,7 +19,7 @@ var friends = [
   {
     name: "MC Pee Pants",
     photo: "https://i.ytimg.com/vi/diybDrSohHI/hqdefault.jpg",
-    scores: [3, 3, 5, 1, 5, 2, 5, 1, 5, 1]
+    scores: [3, 3, 5, 1, 5, 2, 5, 3, 5, 2]
   },
 ];
 
