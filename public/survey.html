@@ -23,7 +23,7 @@
     <h4>Link to Photo (Required)</h4>
     <input type="photo" id="photo" class="userInfo" required>
     <hr>
-
+ 
     <h3><strong>Question 1</strong></h3>
     <h4>Do you like to eat food?</h4>
     <select id="question1" class="answer">
@@ -219,6 +219,8 @@
 
         $("#match-name").text(data.name);
         $("#match-img").attr("src", data.photo);
+        $("#match-img").css({"height": "300px", "width": "240px"})
+        
 
         $("#matchModal").modal("toggle");
       });
